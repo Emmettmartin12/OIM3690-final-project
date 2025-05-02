@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #008348;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 5px solid #bb9753;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header .logo-placeholder {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-placeholder img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Style for the site title text next to the logo */
+header .logo-placeholder .site-title {
+    color: #fff; /* White text */
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    margin-left: 15px; /* Space between logo and title */
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5); /* Optional text shadow */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1100px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+main h1, main h2 {
+    margin-bottom: 1rem;
+    color: #008348;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.placeholder-image {
+    background-color: #ccc;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 1rem 0;
+    color: #666;
+    border: 1px dashed #999;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    background-color: #008348;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #006637;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    display: block;
+    margin-top: 5px;
+}
+
+#form-status, #newsletter-status {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Style for player headshots in the roster table */
+#player-roster table img.player-headshot {
+    max-height: 40px; /* Adjust size as needed */
+    width: auto;
+    vertical-align: middle; /* Align image nicely with text in the cell */
+    border-radius: 4px; /* Optional: Slightly rounded corners */
+}
+
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        margin-top: 10px;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+        margin-left: 0;
+    }
+
+    main {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    header .logo-placeholder {
+        font-size: 1.2rem;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* --- Championship Timeline Styles --- */
+
+#championship-timeline {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the section */
+  border-radius: 8px;
+}
+
+#championship-timeline h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #008348; /* Celtics Green */
+}
+
+#championship-timeline p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+.timeline {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  gap: 15px;
+}
+
+.timeline-item {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 180px;
+  transition: box-shadow 0.3s ease;
+}
+
+.timeline-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-year {
+  background-color: #008348; /* Celtics Green */
+  color: white;
+  padding: 10px 15px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  position: relative; /* For pseudo-element positioning */
+}
+
+.timeline-year:hover {
+  background-color: #006633; /* Darker Green on hover */
+}
+
+.timeline-year::after {
+    content: ' ▼'; /* Simple dropdown indicator */
+    font-size: 0.8em;
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.timeline-year.active::after {
+    transform: rotate(180deg); /* Point arrow up when active */
+}
+
+
+.timeline-details {
+  padding: 0 15px; /* Start with no vertical padding */
+  border-top: 1px solid #eee;
+  background-color: #fdfdfd;
+  max-height: 0; /* Start height at 0 for transition */
+  overflow: hidden; /* Hide content that overflows */
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Smooth transition */
+  white-space: normal; /* Ensure text wraps inside details */
+}
+
+.timeline-details.active {
+    max-height: 500px; /* Increased max-height */
+    padding: 15px; /* Apply padding when active */
+}
+
+
+.timeline-details p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #333;
+  text-align: left; /* Align text left within details */
+  font-style: normal; /* Override italic style from section p */
+}
+
+.timeline-details p strong {
+  color: #008348; /* Highlight player names */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .timeline-item {
+        width: calc(25% - 15px); /* 4 items per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .timeline-item {
+        width: calc(33.333% - 15px); /* 3 items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        width: calc(50% - 15px); /* 2 items per row */
+    }
+    .timeline-details.active {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .timeline-item {
+        width: calc(100% - 15px); /* 1 item per row */
+    }
+    #championship-timeline {
+        padding: 15px;
+    }
+    .timeline-year {
+        padding: 8px 12px;
+    }
+    .timeline-details.active {
+        padding: 10px; /* Ensure padding is set */
+    }
+}
